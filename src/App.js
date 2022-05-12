@@ -7,13 +7,36 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Content from "./views/Content";
 import Contact from "./views/Contact";
 import About from "./views/About";
+import styled from "styled-components";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
+
+const Container = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+const Main = styled.div`
+    // background-color: red;
+    width: 80rem;
+`;
+
+const TestDiv = styled.div`
+  background-color: blue;
+  height: 40rem;
+  width: 100%;
+`;
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <Container>
         <Nav/>
-        <div>
+        <Main>
           <Routes>
             <Route path="/" element={<HomePage />}>
               <Route path="/content" element={<Content />} />
@@ -21,8 +44,17 @@ function App() {
               <Route path="/about" element={<About />} />
             </Route>
           </Routes>
-        </div>
-      </div>
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+            <Content />
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+            <Content />
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+            <Content />
+          </AnimationOnScroll>
+        </Main>
+      </Container>
     </Router>
   );
 }

@@ -3,7 +3,9 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 const NavContainer = styled.nav`
+    // background-color: blue;
     height: 12em;
+    width: 80rem;
 `;
 
 const NavItems = styled.ul`
@@ -12,7 +14,7 @@ const NavItems = styled.ul`
     justify-content: flex-end;
     list-style-type: none;
     margin: 0;
-    padding: 4rem 21.5rem 0 0;
+    padding: 4rem 0 0 0;
 `;
 
 const NavItem = styled.li`
@@ -27,8 +29,8 @@ const NavItemLink = {
 
 function Nav() {
     return (
-       <NavContainer>
-           <NavItems>
+        <NavContainer>
+            <NavItems>
                 <NavItem>
                     <Link to="/content" style={NavItemLink}>
                         <span>
@@ -50,8 +52,8 @@ function Nav() {
                         </span>    
                     </Link> 
                 </NavItem>
-           </NavItems>
-       </NavContainer>
+            </NavItems>
+        </NavContainer>
     )
 };
 
