@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 const NavContainer = styled.nav`
-    // background-color: blue;
     height: 12em;
     width: 80rem;
 `;
@@ -32,21 +31,21 @@ function Nav() {
         <NavContainer>
             <NavItems>
                 <NavItem>
-                    <Link to="/content" style={NavItemLink}>
+                    <Link to="/" style={NavItemLink}>
                         <span>
                             Work
                         </span>
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <Link to="/about" style={NavItemLink}>
+                    <Link to="about" style={NavItemLink}>
                         <span>
                             About
                         </span>
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <Link to="/contact" style={NavItemLink}>
+                    <Link to="contact" style={NavItemLink}>
                         <span>
                             Contact
                         </span>    

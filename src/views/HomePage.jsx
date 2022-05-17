@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components";
-import DougPic from "../images/dougProfile.jpg"
+import Content from "./Content";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Section = styled.div`
     position: relative;
@@ -52,6 +54,15 @@ function HomePage() {
                 <ProfileContainer>
                 </ProfileContainer>
             </Section>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                <Content />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                <Content />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                <Content />
+            </AnimationOnScroll>
         </div>
     )
 };
