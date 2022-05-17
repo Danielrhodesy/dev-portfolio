@@ -45,7 +45,6 @@ const ArrowContainer = styled.div`
     height: 3rem;
     width: 3rem;
     maring: 0;
-    background-color: red;
     margin-bottom: 5rem;
 `;
 
