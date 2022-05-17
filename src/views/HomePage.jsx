@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components";
 import Content from "./Content";
+import * as Scroll from 'react-scroll';
+import {Link} from 'react-scroll'
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ArrowImg from '../images/arrow.png'
@@ -67,10 +69,12 @@ function HomePage() {
                 </ProfileContainer>
             </Section>
             <ArrowContainer>
-                <Arrow src={ArrowImg} />
+                <Link to="content" smooth={true} duration={500}>
+                    <Arrow src={ArrowImg} />
+                </Link>
             </ArrowContainer>
             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-                <Content />
+                <Content id="content"/>
             </AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
                 <Content />

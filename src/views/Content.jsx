@@ -47,7 +47,7 @@ const Line = styled.div`
 
 function Content() {
     return (
-       <SectionContainer>
+       <SectionContainer id="content">
            <HeadingContainer>
                <TitleContainer>
                    <Title>
