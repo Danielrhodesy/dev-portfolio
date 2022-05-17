@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Content from "./Content";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import ArrowImg from '../images/arrow.png'
 
 const Section = styled.div`
     position: relative;
-    height: 40rem;
+    height: 28rem;
     display: flex;
     justify-content: space-between;
 `;
@@ -40,6 +41,18 @@ const ProfileContainer = styled.div`
     z-index: -1;
 `;
 
+const ArrowContainer = styled.div`
+    height: 3rem;
+    width: 3rem;
+    maring: 0;
+    background-color: red;
+    margin-bottom: 5rem;
+`;
+
+const Arrow = styled.img`
+    height: 3rem;
+    width: 3rem;
+`;
 
 function HomePage() {
     return (
@@ -54,6 +67,9 @@ function HomePage() {
                 <ProfileContainer>
                 </ProfileContainer>
             </Section>
+            <ArrowContainer>
+                <Arrow src={ArrowImg} />
+            </ArrowContainer>
             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
                 <Content />
             </AnimationOnScroll>
