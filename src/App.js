@@ -1,9 +1,11 @@
-import HomePage from './views/HomePage';
+import HomePage from './views/HomePage'; 
 import Nav from './views/Nav';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./views/Contact";
 import About from "./views/About";
+import Project from './views/Project';
 import styled from "styled-components";
+import { devices } from "./tokens/breakpointSizes";
 
 const Container = styled.div`
     width: 100%;
@@ -14,7 +16,9 @@ const Container = styled.div`
 `;
 
 const Main = styled.div`
-    width: 80rem;
+    margin: 0 5rem 0 5rem;
+    width: 90rem;
+    max-width: 100%;
 `;
 
 function App() {
@@ -27,7 +31,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            {/* </Route> */}
+            <Route path="project" element={<Project />} />
           </Routes>
         </Main>
       </Container>

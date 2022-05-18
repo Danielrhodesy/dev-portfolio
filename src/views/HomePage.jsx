@@ -2,16 +2,28 @@ import React from "react"
 import styled from "styled-components";
 import Content from "./Content";
 import * as Scroll from 'react-scroll';
-import {Link} from 'react-scroll'
+import { Link as LinkScroll } from 'react-scroll'
+import { Link } from "react-router-dom"
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ArrowImg from '../images/arrow.png'
+import { devices } from "../tokens/breakpointSizes";
 
 const Section = styled.div`
     position: relative;
-    height: 28rem;
+    height: 34rem;
     display: flex;
     justify-content: space-between;
+
+
+    @media ${devices.laptop} {
+        height: 34rem;
+    }
+    
+      @media ${devices.desktop} {
+        height: 54rem;
+    }
+    
 `;
 
 const MainTitleContainer = styled.div`
@@ -69,13 +81,15 @@ function HomePage() {
                 </ProfileContainer>
             </Section>
             <ArrowContainer>
-                <Link to="content" smooth={true} duration={500}>
+                <LinkScroll to="content" smooth={true} duration={500}>
                     <Arrow src={ArrowImg} />
-                </Link>
+                </LinkScroll>
             </ArrowContainer>
-            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-                <Content id="content"/>
-            </AnimationOnScroll>
+            <Link to="project">
+                <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                    <Content id="content"/>
+                </AnimationOnScroll>
+            </Link>
             <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
                 <Content />
             </AnimationOnScroll>
