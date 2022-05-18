@@ -28,7 +28,7 @@ const NavItemLink = {
 
 function Nav() {
     return (
-        <NavContainer>
+        <NavContainer id="top">
             <NavItems>
                 <NavItem>
                     <Link to="/" style={NavItemLink}>

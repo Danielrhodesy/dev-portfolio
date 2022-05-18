@@ -67,6 +67,11 @@ const Arrow = styled.img`
     width: 3rem;
 `;
 
+const LinkContainer = {
+    color: "black",
+    textDecoration: "none",
+}
+
 function HomePage() {
     return (
         <div>
@@ -85,7 +90,7 @@ function HomePage() {
                     <Arrow src={ArrowImg} />
                 </LinkScroll>
             </ArrowContainer>
-            <Link to="project">
+            <Link to="project" style={LinkContainer}>
                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
                     <Content id="content"/>
                 </AnimationOnScroll>

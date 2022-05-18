@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components";
+import { Link as LinkScroll } from 'react-scroll'
+import Link from "react-scroll/modules/components/Link";
 
 const Section = styled.div`
     height: 15rem;
@@ -33,8 +35,8 @@ const FlexContainer = styled.div`
     gap: 8rem;
     justify-content: ${props => props.space};
     padding: 2rem 0 2rem 0;
-    > h2 {
-        color: #134612;
+    > * {
+        color: ${props => props.green}
     }
 `;
 
@@ -124,12 +126,14 @@ function Project () {
             </Container>
             <ImageContainer></ImageContainer>
             <Container>
-                <FlexContainer space="space-between">
+                <FlexContainer space="space-between" green="#134612">
                     <ButtonContainer>
                         <h2>Next Project,</h2>
                         <h2>Previous Project.</h2>
                     </ButtonContainer>
-                    <h2>Back to top.</h2>
+                    <Link to="top" smooth={true} duration={500}>
+                        <h2>Back to top.</h2>
+                    </Link>
                 </FlexContainer>
             </Container>
             <Container>
